@@ -26,7 +26,7 @@ client.on('messageCreate', async (message) => {
 	await message.startThread({
 		name: message.content,
 		type: 'GUILD_PUBLIC_THREAD',
-		autoArchiveDuration: 120
+		autoArchiveDuration: 60
 	});
 });
 
