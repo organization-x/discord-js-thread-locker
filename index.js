@@ -23,11 +23,17 @@ client.on('messageCreate', async (message) => {
 	if(!monitoredChannels.includes(channelName))
 		return;
 
-	await message.startThread({
-		name: message.content,
-		type: 'GUILD_PUBLIC_THREAD',
-		autoArchiveDuration: 60
-	});
+	try{
+		await message.startThread({
+			name: message.content,
+			type: 'GUILD_PUBLIC_THREAD',
+			autoArchiveDuration: 60
+		});
+	}
+	catch(error){
+		console.error(error);
+	}
+	
 });
 
 client.login(token);
