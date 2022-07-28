@@ -1,0 +1,11 @@
+{
+  "name": "threadcreator",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/organization-x/threadcreator.git",
+  "author": "Ray Cai Flanagan <hjkareus@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "discord.js": "^14.0.3"
+  }
+}
