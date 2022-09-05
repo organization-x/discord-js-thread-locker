@@ -44,17 +44,19 @@ client.on("messageCreate", async (message) => {
 			await message.delete();
 			// respond with a warning
 			let msg = await message.channel.send(
-				`${message.author} You can only send links here!`
+				`${message.author} This channel is set to links only. Once you send a link, we will automatically create a thread for discussion about your link.`
 			);
+
 			// delete message after 5 seconds
 			setTimeout(() => {
 				msg.delete();
 			}, 5000);
 			return;
 		}
-		let thread_name = message.author.username + "'s video: discussion";
+		let threadName = `${message.author.username}'s video: discussion`;
+
 		await message.startThread({
-			name: thread_name,
+			name: threadName,
 			type: "GUILD_PUBLIC_THREAD",
 			autoArchiveDuration: 60,
 		});
