@@ -53,7 +53,7 @@ client.on("messageCreate", async (message) => {
 			}, 5000);
 			return;
 		}
-		let threadName = `${message.author.username}'s video: discussion`;
+		let threadName = `${message.author.username}'s thread`;
 
 		await message.startThread({
 			name: threadName,
