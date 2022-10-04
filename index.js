@@ -4,14 +4,6 @@ const token = process.env.THREAD_CREATOR_DISCORD_TOKEN;
 const monitoredChannels = [
 	"videos",
 	"ai-news",
-	"frontend-dev",
-	"backend-dev",
-	"mobile-dev",
-	"applied-ai",
-	"gpt",
-	"computer-vision",
-	"nft-art",
-	"product-management",
 ];
 
 const client = new Client({
